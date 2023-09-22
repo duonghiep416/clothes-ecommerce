@@ -1,0 +1,76 @@
+@use "../abstracts";
+%flexItemCenter {
+    display: flex;
+    align-items: center;
+}
+:root {
+    --text-dark-color: #2d2d2d;
+    --text-light-dark-color: #676562;
+    --header-bg: #f2ede6;
+}
+
+.header {
+    background-color: var(--header-bg);
+}
+
+.navbar {
+    @extend %flexItemCenter;
+    padding: 30px 120px;
+
+    @include abstracts.breakpoint(xxl) {
+        padding: 30px 0;
+    }
+
+    @include abstracts.breakpoint(lg) {
+        justify-content: space-between;
+    }
+
+    &__list {
+        @extend %flexItemCenter;
+        column-gap: 36px;
+        margin-right: auto;
+        margin-left: 71.73px;
+
+        @include abstracts.breakpoint(lg) {
+            display: none;
+        }
+    }
+
+    &__link {
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 112.5%;
+        color: var(--text-dark-color);
+    }
+
+    &__more-icon {
+        display: none;
+        @include abstracts.breakpoint(lg) {
+            display: block;
+            order: 1;
+        }
+
+        @include abstracts.breakpoint(sm) {
+            display: block;
+            order: 2;
+        }
+    }
+}
+
+.cta {
+    @extend %flexItemCenter;
+    gap: 28px;
+    @include abstracts.breakpoint(lg) {
+        order: 3;
+    }
+
+    @include abstracts.breakpoint(sm) {
+        display: none;
+    }
+    &__link {
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 112.5%;
+        color: var(--text-dark-color);
+    }
+}

@@ -1,0 +1,35 @@
+:root {
+    --button-yellow-color: #f7d047;
+    --text-white-color: #f2ede6;
+}
+
+.cta__button {
+    height: 58px;
+    width: 310px;
+    background-color: var(--button-yellow-color);
+    border-radius: 999px;
+    font-size: 1.9rem;
+    font-weight: 500;
+    line-height: 1;
+    color: var(--text-dark-color);
+}
+
+.cta__button--large {
+    width: 189px;
+    background-color: transparent;
+    border: 1px solid var(--text-light-dark-color);
+}
+
+.cta__button--medium {
+    width: 175px;
+}
+
+.cta__button--small {
+    width: 156px;
+    height: 54px;
+    color: var(--text-white-color);
+    background-color: var(--text-dark-color);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 112.5%;
+}

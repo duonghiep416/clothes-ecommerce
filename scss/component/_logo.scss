@@ -1,0 +1,12 @@
+@use "../abstracts";
+
+.navbar__logo {
+    @include abstracts.breakpoint(lg) {
+        order: 2;
+    }
+
+    @include abstracts.breakpoint(sm) {
+        order: 1;
+        width: 74px;
+    }
+}

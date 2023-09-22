@@ -23,6 +23,7 @@ button {
     border: none;
     outline: none;
     background: transparent;
+    cursor: pointer;
 }
 
 button,
@@ -31,4 +32,8 @@ textarea,
 input {
     font-family: inherit;
     color: inherit;
+}
+
+img {
+    max-width: 100%;
 }
