@@ -13,3 +13,23 @@ function load(selector, path) {
             }
         });
 }
+
+// FadeInNavbar
+function fadeInNavbar() {
+    const navbarMoreIcon = document.querySelector(".navbar__more-icon");
+    const navbarList = document.querySelector(".navbar__list");
+    navbarMoreIcon.addEventListener("click", (e) => {
+        e.stopPropagation();
+        navbarList.classList.toggle("fadeIn");
+    });
+    navbarList.addEventListener("click", (e) => {
+        e.stopPropagation();
+    });
+    document.addEventListener("click", () => {
+        navbarList.classList.remove("fadeIn");
+    });
+}
+
+window.addEventListener("load", () => {
+    fadeInNavbar();
+});
