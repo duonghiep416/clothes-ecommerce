@@ -18,15 +18,19 @@ function load(selector, path) {
 function fadeInNavbar() {
     const navbarMoreIcon = document.querySelector(".navbar__more-icon");
     const navbarList = document.querySelector(".navbar__list");
+    const overlay = document.querySelector(".overlay");
+
     navbarMoreIcon.addEventListener("click", (e) => {
         e.stopPropagation();
         navbarList.classList.toggle("fadeIn");
+        overlay.classList.toggle("active");
     });
     navbarList.addEventListener("click", (e) => {
         e.stopPropagation();
     });
     document.addEventListener("click", () => {
         navbarList.classList.remove("fadeIn");
+        overlay.classList.remove("active");
     });
 }
 

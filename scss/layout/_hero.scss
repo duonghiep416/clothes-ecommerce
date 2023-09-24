@@ -1,0 +1,159 @@
+@use "../abstracts";
+
+:root {
+    --hero-desc-color: #676562;
+}
+.hero {
+    background-color: var(--header-bg);
+    padding: 70px 0 90px;
+    @include abstracts.breakpoint(lg) {
+        padding: 10px 0 10px;
+    }
+    &__inner {
+        padding: 0 120px;
+        @include abstracts.breakpoint(xxl) {
+            padding: 0;
+            gap: 20px;
+        }
+
+        @include abstracts.breakpoint(lg) {
+            flex-direction: column;
+        }
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 30px;
+    }
+
+    &__inner-column--left {
+        flex-shrink: 0;
+        width: 570px;
+        @include abstracts.breakpoint(xxl) {
+            width: 540px;
+        }
+
+        @include abstracts.breakpoint(xl) {
+            width: 420px;
+        }
+
+        @include abstracts.breakpoint(lg) {
+            width: 100%;
+        }
+
+        @include abstracts.breakpoint(sm) {
+        }
+    }
+
+    &__title {
+        font-size: 7.8rem;
+        font-weight: 600;
+        line-height: 112.821%;
+        letter-spacing: 0.078rem;
+        margin-top: 36px;
+
+        @include abstracts.breakpoint(xxl) {
+            font-size: 6rem;
+        }
+
+        @include abstracts.breakpoint(xl) {
+            font-size: 5.5rem;
+        }
+
+        @include abstracts.breakpoint(lg) {
+            font-size: 7.1rem;
+            text-align: center;
+            letter-spacing: 8px;
+        }
+
+        @include abstracts.breakpoint(md) {
+            font-size: 6rem;
+        }
+
+        @include abstracts.breakpoint(sm) {
+            font-size: 4.5rem;
+            font-weight: 600;
+            line-height: 115.556%;
+            letter-spacing: 0.045rem;
+            margin-top: 0px;
+            text-align: start;
+        }
+
+        &-image {
+            width: 174px;
+            height: 56px;
+            border-radius: 999px;
+            object-fit: cover;
+            @include abstracts.breakpoint(xxl) {
+                height: 45px;
+                width: 160px;
+            }
+
+            @include abstracts.breakpoint(lg) {
+                width: 160px;
+                height: 40px;
+            }
+
+            @include abstracts.breakpoint(sm) {
+                width: 102.263px;
+                height: 32.912px;
+            }
+        }
+    }
+
+    &__desc {
+        margin: 20px 0 44px;
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 170%;
+        color: var(--hero-desc-color);
+        @include abstracts.breakpoint(xxl) {
+            font-size: 1.7rem;
+        }
+
+        @include abstracts.breakpoint(xl) {
+            font-size: 1.5rem;
+        }
+
+        @include abstracts.breakpoint(lg) {
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+        @include abstracts.breakpoint(sm) {
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 142.732%;
+            text-align: start;
+            margin: 10.41px 0 20.32px;
+        }
+    }
+
+    &__button {
+        display: flex;
+        gap: 30px;
+        @include abstracts.breakpoint(lg) {
+            justify-content: center;
+        }
+
+        @include abstracts.breakpoint(sm) {
+            justify-content: flex-start;
+            gap: 17.63px;
+        }
+    }
+
+    &__main-img {
+        @include abstracts.breakpoint(xxl) {
+            width: 600px;
+        }
+
+        @include abstracts.breakpoint(xl) {
+            width: 520px;
+        }
+
+        @include abstracts.breakpoint(lg) {
+            width: 100%;
+            margin: 20px auto 0;
+        }
+
+        width: 670px;
+    }
+}
