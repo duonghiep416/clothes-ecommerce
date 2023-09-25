@@ -1,8 +1,5 @@
 @use "../abstracts";
 
-:root {
-    --hero-desc-color: #676562;
-}
 .hero {
     background-color: var(--header-bg);
     padding: 70px 0 90px;
