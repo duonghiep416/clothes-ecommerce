@@ -2,29 +2,13 @@
 .services {
     background: var(--services-bg-color);
     &__inner {
-        padding: 0 120px 140px;
+        padding: 0 120px;
         @include abstracts.breakpoint(xxl) {
-            padding: 0 0 70px;
+            padding: 0;
         }
     }
-    &__title {
-        font-size: 5rem;
-        font-weight: 600;
-        line-height: 108%;
-        color: var(--white);
-        text-align: center;
-        padding: 140px 0 71px;
-        @include abstracts.breakpoint(sm) {
-            font-size: 3rem;
-            line-height: 126.667%;
-            padding: 50px 0 40px;
-            max-width: 340px;
-            margin: 0 auto;
-        }
-        @include abstracts.breakpoint(md) {
-            padding-top: 80px;
-        }
-    }
+    // &__title {
+    // }
 
     &__list {
         --grid-gutter-x: 80px;
@@ -36,8 +20,10 @@
             width: calc(33.3333333333% - 20px);
             @include abstracts.breakpoint(md) {
                 width: 95%;
+                margin-bottom: 30px;
             }
-            margin: 0 0 30px;
+
+            margin: 0;
         }
         color: var(--white);
         @include abstracts.breakpoint(xl) {

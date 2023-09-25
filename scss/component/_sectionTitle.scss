@@ -1,0 +1,35 @@
+@use "../abstracts";
+.section {
+    &__title {
+        padding: 140px 0 71px;
+        font-size: 5rem;
+        font-weight: 600;
+        line-height: 108%;
+        color: var(--white);
+        text-align: center;
+        @include abstracts.breakpoint(sm) {
+            font-size: 3rem;
+            line-height: 126.667%;
+            padding: 50px 0 40px;
+            max-width: 340px;
+            margin: 0 auto;
+        }
+        @include abstracts.breakpoint(md) {
+            padding-top: 80px;
+        }
+    }
+
+    &__desc {
+        color: var(--section-desc-color);
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 120%;
+        @include abstracts.breakpoint(sm) {
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 400;
+            line-height: 150%;
+        }
+    }
+}
