@@ -2,9 +2,13 @@
 
 .hero {
     background-color: var(--header-bg);
-    padding: 70px 0 90px;
+    padding: 184px 0 90px;
     @include abstracts.breakpoint(lg) {
-        padding: 10px 0 10px;
+        padding: 124px 0 40px;
+    }
+
+    @include abstracts.breakpoint(md) {
+        padding-top: 102px;
     }
     &__inner {
         padding: 0 120px;
