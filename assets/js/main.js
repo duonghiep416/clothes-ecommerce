@@ -34,6 +34,10 @@ function fadeInNavbar() {
     });
 }
 
+function getElement(el) {
+    return document.querySelector(el);
+}
+
 window.addEventListener("load", () => {
     fadeInNavbar();
 });

@@ -1,0 +1,132 @@
+@use "../abstracts";
+
+.features {
+    background: var(--services-bg-color);
+    &__inner {
+        padding: 0 120px;
+        @include abstracts.breakpoint(xxl) {
+            padding: 0;
+        }
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: 0.93fr 1fr 0.93fr;
+        grid-template-rows: repeat(2, 1fr);
+        height: auto;
+        background: rgb(241, 241, 241, 0.1);
+        grid-gap: 2px;
+        & > :nth-child(-n + 3) {
+            padding-bottom: 60px;
+        }
+
+        & > :nth-child(n + 4):nth-child(-n + 6) {
+            padding-top: 60px;
+        }
+
+        & > :nth-child(3n + 1) {
+            padding-right: 40px;
+        }
+
+        & > :nth-child(3n + 2) {
+            padding-left: 60px;
+            padding-right: 40px;
+        }
+
+        & > :nth-child(3n + 3) {
+            padding-left: 30px;
+            padding-right: 70px;
+        }
+
+        @include abstracts.breakpoint(xl) {
+            & > :nth-child(-n + 3) {
+                padding-bottom: 30px;
+            }
+
+            & > :nth-child(3n + 3) {
+                padding-left: 30px;
+                padding-right: 20px;
+            }
+
+            & > :nth-child(3n + 2) {
+                padding-left: 30px;
+                padding-right: 20px;
+            }
+
+            & > :nth-child(3n + 1) {
+                padding-right: 20px;
+            }
+
+            & > :nth-child(n + 4):nth-child(-n + 6) {
+                padding-top: 30px;
+            }
+        }
+
+        @include abstracts.breakpoint(lg) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            & > :nth-child(-n + 2) {
+                padding-bottom: 30px;
+            }
+
+            & > :nth-child(n + 3):nth-child(-n + 4) {
+                padding-top: 30px;
+            }
+
+            & > :nth-child(2n + 1) {
+                padding-left: 0;
+                padding-right: 40px;
+            }
+
+            & > :nth-child(2n) {
+                padding-left: 30px;
+                padding-right: 20px;
+            }
+        }
+
+        @include abstracts.breakpoint(sm) {
+            grid-gap: 0;
+            background: transparent;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(6, auto);
+            & > :nth-child(n) {
+                padding: 0 20px 30px 0 !important;
+            }
+        }
+    }
+
+    &__item {
+        background: var(--services-bg-color);
+    }
+
+    &__icon {
+        width: 70px;
+        height: 70px;
+        border-radius: 10px;
+        background: var(--features-icon-bg-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    &__item-title {
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 120%;
+        color: var(--white);
+        margin-bottom: 14px;
+    }
+
+    &__item-desc {
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 162.5%;
+        color: var(--section-desc-color);
+    }
+}
+
+@include abstracts.breakpoint(sm) {
+    .container {
+        --grid-gutter-x: 40px;
+    }
+}

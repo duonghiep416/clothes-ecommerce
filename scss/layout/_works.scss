@@ -54,7 +54,7 @@
         width: 100%;
         height: 430px;
         @include abstracts.breakpoint(sm) {
-            height: 306.489px;
+            height: auto;
             padding: 24px;
         }
     }
@@ -69,7 +69,7 @@
         }
 
         @include abstracts.breakpoint(sm) {
-            width: 335px;
+            max-width: 400px;
             height: 306.489px;
         }
     }
