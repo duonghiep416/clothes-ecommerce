@@ -104,15 +104,14 @@
     }
 
     &__more-icon {
-        display: none;
+        width: 0;
         cursor: pointer;
         @include abstracts.breakpoint(lg) {
-            display: block;
+            width: auto;
             order: 1;
         }
 
         @include abstracts.breakpoint(sm) {
-            display: block;
             order: 2;
         }
     }

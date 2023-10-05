@@ -16,6 +16,9 @@ function load(selector, path) {
 
 // FadeInNavbar
 function fadeInNavbar() {
+    if (!document.querySelector(".navbar__more-icon")) {
+        return;
+    }
     const navbarMoreIcon = document.querySelector(".navbar__more-icon");
     const navbarList = document.querySelector(".navbar__list");
     const overlay = document.querySelector(".overlay");
@@ -32,10 +35,6 @@ function fadeInNavbar() {
         navbarList.classList.remove("fadeIn");
         overlay.classList.remove("active");
     });
-}
-
-function getElement(el) {
-    return document.querySelector(el);
 }
 
 window.addEventListener("load", () => {
